@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install -g spago
+          npm install -g spago@next
           npm install
           spago install
 
