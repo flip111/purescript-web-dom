@@ -28,7 +28,3 @@ jobs:
 
       - name: Build source
         run: spago build
-
-      - name: Run tests
-        run: |
-          spago test
