@@ -24,7 +24,7 @@ jobs:
         run: |
           npm install -g spago
           npm install
-          spago fetch
+          spago install
 
       - name: Build source
         run: spago build
