@@ -82,12 +82,15 @@ export function setValue(list) {
   };
 }
 
-export function tokens(list) {
+export function tokens(domTokenList) {
   return function () {
-    const result = [];
-    for (const token of list.tokens) {
-      result.push(token);
+    var tokens = [];
+    var tokens_length = domTokenList.length;
+
+    for (var i = 0; i < tokens_length; i++) {
+      tokens.push(domTokenList.item(i));
     }
-    return result;
+
+    return tokens;
   };
-}
+};
