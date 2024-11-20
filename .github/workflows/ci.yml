@@ -18,13 +18,18 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: "14"
 
       - name: Install dependencies
         run: |
-          npm install -g spago@next
+          npm install -g bower
           npm install
-          spago install
+          bower install --production
 
       - name: Build source
-        run: spago build
+        run: npm run-script build
+
+      - name: Run tests
+        run: |
+          bower install
+          npm run-script test --if-present

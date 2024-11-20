@@ -84,13 +84,10 @@ export function setValue(list) {
 
 export function tokens(domTokenList) {
   return function () {
-    var tokens = [];
-    var tokens_length = domTokenList.length;
-
-    for (var i = 0; i < tokens_length; i++) {
-      tokens.push(domTokenList.item(i));
+    const tokens = [];
+    for (const token of domTokenList) {
+      tokens.push(token);
     }
-
     return tokens;
   };
-};
+}
